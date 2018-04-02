@@ -9,9 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "base64-img": "^1.0.4",
+    "chalk": "^2.3.2",
     "dotenv": "^5.0.1",
+    "pluralize": "^7.0.0",
     "random-array": "0.0.2",
     "random-item-in-array": "^1.0.0",
-    "shuffle-array": "^1.0.1"
+    "redis": "^2.8.0",
+    "rgb-hex": "^2.1.0",
+    "shuffle-array": "^1.0.1",
+    "svg-to-png": "^3.1.2",
+    "twitter": "^1.7.1",
+    "word-color": "^1.2.0"
   }
 }

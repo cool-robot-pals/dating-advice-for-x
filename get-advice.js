@@ -70,7 +70,6 @@ const makeWordRegex = (words) => {
   return new RegExp('\\b('+words.join('|')+')\\b','g');
 }
 
-const theme = shuffle(rand(themes));
 const text = fs.readFileSync('./corpus.txt', 'utf8').split("\n\n")
 	.map(_ => _.replace(/\n/g,''))
 	.filter(_ => _.length > 64)
@@ -93,7 +92,10 @@ const transforms = [
   },
 ]
 
-const getPart = async () => {
+const getPart = async (themeIndex) => {
+  
+  const theme = shuffle(themes[themeIndex]);
+  
   binaryKeywords.forEach(pair => {
 
     transforms.forEach(transform => {
@@ -116,4 +118,4 @@ const getPart = async () => {
 
 }
 
-getPart().then(console.log);
+module.exports = getPart;
